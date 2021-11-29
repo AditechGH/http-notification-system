@@ -98,7 +98,7 @@ $ npm run test:cov
 ```json
   {
       "url": "http://mysubscriber.test",
-      "topic": "{topic}"
+      "topic": "topic1"
   }
 ```
 
