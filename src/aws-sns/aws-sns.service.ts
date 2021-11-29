@@ -61,7 +61,7 @@ export class AwsSnsService {
    *
    * @param {string} topic The topic to publish to
    * @param {any} message The payload of the http request
-   * @returns {Promise<string>} Promise string as MessageId
+   * @returns {Promise<string>} MessageId as Promise string
    * @throws {HttpException} Throw an HttpException error if publish is not successful
    */
   public async publish(topic: string, message: any): Promise<string> {
