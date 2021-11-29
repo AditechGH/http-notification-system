@@ -83,7 +83,7 @@ $ npm run test:cov
 
 ```json
   {
-      "url": "http://mysubscriber.test
+      "url": "http://mysubscriber.test"
   }
 ```
 #### Sample Request Headers
@@ -127,7 +127,7 @@ $ npm run test:cov
   curl --location --request POST 'http://localhost:3000/subscribe/topic1' \
   --header 'Content-Type: application/json' \
   --data-raw '{
-      "url": "http://vialung.com"
+      "url": "vialung"
   }'
 ```
 ##### Response
