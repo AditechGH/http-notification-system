@@ -37,7 +37,7 @@ describe('AwsSnsController', () => {
   });
 
   describe('POST /publish', () => {
-    it('should return a string containing MessageId', async () => {
+    it('should return a string representing MessageId', async () => {
       const data = {
         topic: 'topic1',
         message: JSON.stringify({ url: 'http://halalclothing.co' }),

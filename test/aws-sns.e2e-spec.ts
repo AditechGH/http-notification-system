@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { AppModule } from './../src/app.module';
+import { AppModule } from '../src/app.module';
 
 describe('AwsSnsController (e2e)', () => {
   let app: INestApplication;
@@ -49,10 +49,10 @@ describe('AwsSnsController (e2e)', () => {
       expect(resp.body.error).toBe('InvalidParameter');
     });
 
-    it('/ invalid @Body(url): unregistered URL', async () => {
+    it('/ invalid @Body(url): invalid URL', async () => {
       const resp = await request(app.getHttpServer())
         .post('/subscribe/topic1')
-        .send({ url: 'http://vialung.com' });
+        .send({ url: 'vialung' });
       expect(resp.status).toBe(400);
       expect(resp.body.error).toBe('InvalidParameter');
     });

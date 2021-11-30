@@ -44,7 +44,7 @@ describe('AwsSnsService', () => {
       });
     });
 
-    it('should return a string containing MessageId', async () => {
+    it('should return a string representing MessageId', async () => {
       snsMock.on(PublishCommand).resolves({
         MessageId: '12345678-1111-2222-3333-111122223333',
       });
