@@ -31,7 +31,7 @@ export class AwsSnsService {
    * @param {string} topic The topic to subscribe to
    * @param {string} url The HTTP endpoint(The subscriber)
    * @returns {Promise<SubscribeResponse>} Promise object containing topic and url properties
-   * @throws {HttpException} Will throw an HttpException error if subscription is not successful
+   * @throws {HttpException} Will throw an error if subscribe is not successful
    */
   public async subscribe(
     topic: string,
@@ -62,7 +62,7 @@ export class AwsSnsService {
    * @param {string} topic The topic to publish to
    * @param {any} message The payload of the http request
    * @returns {Promise<string>} Promise string represents MessageId
-   * @throws {HttpException} Will throw an HttpException error if publish is not successful
+   * @throws {HttpException} Will throw an error if publish is not successful
    */
   public async publish(topic: string, message: any): Promise<string> {
     const params = {
